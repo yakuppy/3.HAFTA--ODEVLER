@@ -1,0 +1,42 @@
+'''2.ODEV: SAYI TAHMIN OYUNU
+    Bir degiskene 0-100 arasinda bir deger atayin. Kullanicidan bu sayiyi tahmin etmesini isteyin.
+     Kullaniciyi yaptigi tahminlere gore yonlendirin. Kacinci denemede bildigini soyleyin.
+    Ornek:
+        sayi = 76
+        kullanicinin tahmini = 5
+        cikti = cok dusuk tahminde bulundun daha yuksek bir sayi girmelisin.
+        kullanicinin tahmini = 95
+        cikti = fazla yukari ciktin biraz asagi in.
+        kullanicinin tahmini = 80
+        cikti = cok yaklastin biraz daha inmelisin
+        kullanicinin tahmini = 73
+        cikti = cok yaklastin biraz daha cikmalisin
+        kullanicinin tahmini = 76
+        cikti= tebrikler sayiyi 5.denemede buldunuz'''
+sayi=55
+print("SAYI TAHMIN ETME OYUNUNA HOS GELDINIZ")
+
+i=0
+
+while  True:
+    tahmin = input("0 ile 100 arasinda bir sayi tahmin ediniz  :")
+    i+=1
+
+    if int(tahmin)==sayi:
+        print("tebrikler {} inci denemenizde {} sayisini buldunuz".format(i,sayi))
+        break
+    elif 0<int(tahmin)<=50:
+        print("cok dusuk tahminde bulundun daha yuksek bir sayi girmelisin")
+    elif  50<int(tahmin)<55:
+        print(" cok yaklastin biraz daha cikmalisin")
+    elif 60 < int(tahmin)<= 100:
+        print("cok buyuk tahminde bulundun daha dusuk bir sayi girmelisin")
+    elif 55< int(tahmin) <= 60:
+        print(" cok yaklastin biraz daha dusmelisin")
+    else:
+        print("lutfen sayiyi verilen aralikta giriniz")
+
+
+
+
+
