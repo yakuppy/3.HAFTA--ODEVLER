@@ -1,0 +1,42 @@
+'''1.ODEV: HESAP OLUSTURMA
+    Kullanicidan, kullanici adi ve parola olusturarak hesap olusturmasini isteyin.
+    Bu aldiginiz bilgileri bir dosyaya yazdirin. Her gırıste dosyadakı bılgıler sıfırlanmasın
+    kayıt bılgılerı dosyaya eklenmeye devam etsın.
+    Kullanici daha once girilmis olan bir kullanici adiyla hesap olusturmak isterse, bu kullanici
+    adinin daha once secildigini ve baska bir kullanici adiyla hesap olusturmasini isteyin.'''
+
+
+
+print("HESAP OLUSTURMA PROGRAMINA HOSGELDINIZ...")
+while True:
+
+
+    soru=int(input("yeni hesap olusturmak icin 1 e cikis icin 2 ye basiniz"))
+
+    if soru==1:
+        with open("kullanici.bilgileri.txt","a") as dosya:
+            isim = input("kullanici ismiminizi giriniz")
+            with open("kullanici.bilgileri.txt", "r", encoding="utf-8") as f:
+                data = f.read()
+                if isim in data:
+                    print("bu kullanici ismini daha once kullanilmistir\ntekrar deneyiniz ")
+                    continue
+
+            dosya.write(isim + "\t")
+            sifre = input("parolanizi rakamlari kullanarak olusturunuz")
+            print("hesabiniz olusturuldu")
+            dosya.write(sifre+"\n"   )
+    elif soru==2:
+        print("programdan cikiyorsunuz....")
+        break
+
+
+
+
+
+
+
+
+
+
+    
