@@ -1,0 +1,35 @@
+'''6.ODEV: ASAL SAYI MI?
+    Kullanicidan aldiginiz sayinin asal sayi olup olmadigini sorgulayan bir program yazmanizi istiyoruz.'''
+print("ASAL SAYI BULMA OYUNU")
+
+while True:
+
+    sayi=input(" bir sayi giriniz veya cikis icin q tusuna basiniz")
+
+    if sayi=="q":
+        print("programdan cikiliyor...")
+        break
+    if int(sayi) < 1:
+        print("gireceginiz sayi pozitif ve 1 den  byuk olmali")
+
+        continue
+
+    if  int(sayi)==2:
+         print("GIRMIS OLDUGUNUZ {} SAYISI ASAL SAYIDIR".format(sayi))
+
+    else:
+        for i in  range(2,int(sayi)):
+
+
+            if int(sayi)%i==0:
+
+                print("girmis oldugunuz {} sayi asal sayi degildir".format(sayi))
+                break
+        else:
+            print("GIRMIS OLDUGUNUZ {} SAYISI ASAL SAYIDIR".format(sayi))
+
+
+
+
+
+
